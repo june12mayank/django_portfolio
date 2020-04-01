@@ -70,8 +70,8 @@
       <h1 style="font-family: sans-serif;">Hi, I am Mayank!</h1>
       <p class="lead text-muted">Welcome to my portfolio website.I build it in django and bootstrap.Awesomee isn't it. Do search around and see my resumes and social profiles.</p>
       <p>
-        <a href="127.0.0.1:8000/blog/" class="btn btn-secondary my-2">Blogs</a>
-        <a href="#" class="btn btn-primary my-2">Jobs</a>
+        <a href="#" class="btn btn-primary my-2">Blogs</a>
+        <a href="#" class="btn btn-secondary my-2">Jobs</a>
         <a href="mailto:mayank1261998@gmail.com" class="btn btn-secondary my-2">Mail Me</a>
       </p>
     </div>
@@ -82,15 +82,17 @@
 
       <div class="row">
  <!---------------------card start here----> 
-      {% for job in Jobs.all %}      
-        <div class="col-md-4 ">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{job.img.url}}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-            </div>
-          </div>
-        </div>
+      {% for blog in blogs.all %}      
+        <div class="container">
+        <h3>{{blog.title}}</h3>
+        <br>
+        {{blog.pub_date}}
+        <br></div>
+        <br>
+        <div class="container"><img class="img-fluid" src="{{blog.image.url}}" height="100" width="200"/></div>
+        <br>
+        {{blog.body}}
+        <br><br>
       {% endfor %}
 <!------------------------card end here-->
       </div>
