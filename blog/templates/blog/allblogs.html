@@ -1,7 +1,7 @@
-
 <!doctype html>
 <html lang="en">
   <head>
+    {%load static %}
     <meta charset="utf-8">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>My Resume</title>
@@ -71,7 +71,7 @@
       <p class="lead text-muted">Welcome to my portfolio website.I build it in django and bootstrap.Awesomee isn't it. Do search around and see my resumes and social profiles.</p>
       <p>
         <a href="#" class="btn btn-primary my-2">Blogs</a>
-        <a href="#" class="btn btn-secondary my-2">Jobs</a>
+        <a href="{% url 'jobs' %}" class="btn btn-secondary my-2">Jobs</a>
         <a href="mailto:mayank1261998@gmail.com" class="btn btn-secondary my-2">Mail Me</a>
       </p>
     </div>

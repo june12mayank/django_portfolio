@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="generator" content="Jekyll v3.8.6">
@@ -48,10 +48,10 @@
           Resume
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Data Science/ML Resume</a>
-          <a class="dropdown-item" href="#">Python/Django Resume</a>
+          <a class="dropdown-item" href="{% static 'ds.pdf' %}">Data Science/ML Resume</a>
+          <a class="dropdown-item" href="{% static 'Resume.pdf' %}">Python/Django Resume</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Full Resume</a>
+          <a class="dropdown-item" href="{ %static 'Resume.pdf' %}">Full Resume</a>
         </div>
       </li>
     </ul>
@@ -68,9 +68,10 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 style="font-family: sans-serif;">Hi, I am Mayank!</h1>
+      <img src="{% static 'IMG.jpg'%}" height="200" width="200" />
       <p class="lead text-muted">Welcome to my portfolio website.I build it in django and bootstrap.Awesomee isn't it. Do search around and see my resumes and social profiles.</p>
       <p>
-        <a href="127.0.0.1:8000/blog/" class="btn btn-secondary my-2">Blogs</a>
+        <a href="{% url 'allblogs' %}" class="btn btn-secondary my-2">Blogs</a>
         <a href="#" class="btn btn-primary my-2">Jobs</a>
         <a href="mailto:mayank1261998@gmail.com" class="btn btn-secondary my-2">Mail Me</a>
       </p>

@@ -6,6 +6,7 @@ import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', jobs.views.home),
+    path('', jobs.views.home,name="jobs"),
     path('blog/',include('blog.urls')),
-]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+]+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
